@@ -1,0 +1,32 @@
+<div class="dialog">
+  <h2 mat-dialog-title> {{header}}</h2>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Имя" [(ngModel)]="name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Фамилия" [(ngModel)]="second_name">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="email" [(ngModel)]="email">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Телефон" [(ngModel)]="phone">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Дата найма" [(ngModel)]="hire_date">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Работа" [(ngModel)]="work">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Зарплата" [(ngModel)]="salary">
+  </mat-form-field>
+
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="onNoClick()">Отмена</button>
+    <button mat-raised-button color="primary" (click)="onYesClick()">Сохранить</button>
+  </div>
+  <!--    <label *ngIf="message" class="error">{{message}}</label>-->
+
+
+</div>

@@ -1,0 +1,41 @@
+.mat-dialog-container{
+  width: 200px;
+  height: 70px;
+}
+.button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+button{
+  background: black;
+  color: #1e88e5;
+  font-weight: 400;
+  letter-spacing: .0892857143em;
+  font-size: 13px;
+  margin: 5px;
+}
+
+
+.dialog {
+  width: 300px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.error {
+  color: red;
+  display: block;
+  margin-top: 20px;
+}
+
+.wrapper-spinner {
+  width: 100%;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  min-height: 200px;
+}

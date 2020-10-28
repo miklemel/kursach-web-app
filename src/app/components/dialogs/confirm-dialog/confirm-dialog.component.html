@@ -1,0 +1,12 @@
+<div class="dialog">
+  <h2 mat-dialog-title> {{header}}</h2>
+  <div mat-dialog-content style="margin-top: 40px; margin-bottom: 30px">
+    <h4>
+      {{dialogText}}
+    </h4>
+  </div>
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="onNoClick()">Отмена</button>
+    <button mat-raised-button color="primary" (click)="onYesClick()">Ок</button>
+  </div>
+</div>

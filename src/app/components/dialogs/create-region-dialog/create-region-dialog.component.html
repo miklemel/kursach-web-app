@@ -1,0 +1,13 @@
+<div class="dialog">
+  <h2 mat-dialog-title> {{header}}</h2>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Название" [(ngModel)]="name">
+  </mat-form-field>
+  <div class="button-container">
+    <button mat-raised-button color="primary" (click)="onNoClick()">Отмена</button>
+    <button mat-raised-button color="primary" (click)="onYesClick()">Сохранить</button>
+  </div>
+  <!--    <label *ngIf="message" class="error">{{message}}</label>-->
+
+
+</div>

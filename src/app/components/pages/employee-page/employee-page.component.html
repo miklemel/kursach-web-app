@@ -1,0 +1,60 @@
+
+<div class="mat-elevation-z8" style="margin-right: 220px" *ngIf="listData.data.length!==0">
+
+  <mat-table id="my-table" [dataSource]="listData" >
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef >Имя</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="second_name">
+      <mat-header-cell *matHeaderCellDef  >Фамилия</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.second_name }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="email">
+      <mat-header-cell *matHeaderCellDef  >email</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.email }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef  >Телефон</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.phone}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="hire_date">
+      <mat-header-cell *matHeaderCellDef  >Дата найма</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.hire_date}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="work">
+      <mat-header-cell *matHeaderCellDef  >Работа</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.work}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="salary">
+      <mat-header-cell *matHeaderCellDef  >Зарплата</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.salary}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions" stickyEnd>
+      <mat-header-cell  *matHeaderCellDef >
+        <button   mat-raised-button (click)="openCreateDialog()">
+          Создать
+        </button>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"  >
+        <a mat-icon-button color="primary" (click)="openEditDialog(element)">
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a mat-icon-button color="warn"  aria-label="123231" (click)="removeEmployee(element)">
+          <mat-icon>delete</mat-icon>
+        </a>
+<!--        <button mat-icon-button color="warn"-->
+<!--                (click)="removeEmployee(element)">-->
+<!--          <mat-icon>delete</mat-icon>-->
+<!--        </button>-->
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+
+  </mat-table>
+
+</div>

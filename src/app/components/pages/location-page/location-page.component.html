@@ -1,0 +1,45 @@
+
+<div class="mat-elevation-z8" style="margin-right: 220px" *ngIf="listData.data.length!==0">
+
+  <mat-table id="my-table" [dataSource]="listData" >
+    <ng-container matColumnDef="street_address">
+      <mat-header-cell *matHeaderCellDef >Адрес</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.street_address}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="postal_code">
+      <mat-header-cell *matHeaderCellDef  >Почтовый код</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.postal_code }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef  >Город</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.city }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="state_province">
+      <mat-header-cell *matHeaderCellDef  >Провинция</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{element.state_province }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions" stickyEnd>
+      <mat-header-cell  *matHeaderCellDef >
+        <button   mat-raised-button (click)="openCreateDialog()">
+          Создать
+        </button>
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"  >
+        <a mat-icon-button color="primary" (click)="openEditDialog(element)">
+          <mat-icon>edit</mat-icon>
+        </a>
+        <a mat-icon-button color="warn"  aria-label="123231" (click)="removeEmployee(element)">
+          <mat-icon>delete</mat-icon>
+        </a>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+
+  </mat-table>
+
+</div>
+
